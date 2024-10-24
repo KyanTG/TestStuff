@@ -1,0 +1,105 @@
+/*************/
+/* DE HEADER */
+/*************/
+header {
+    /* JOUW CODE HIER - stap 3 */
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    
+    position:sticky;
+    top:0;
+  }
+  
+  
+  
+  /***************/
+  /* MENU BUTTON */
+  /***************/
+  header > button {
+    /* JOUW CODE HIER - stap 3 */
+    order:-1;
+  }
+  
+  
+  
+  /************/
+  /* HET MENU */
+  /************/
+  nav {
+    /* JOUW CODE HIER - stap 1 */
+    position:fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    
+    /* JOUW CODE HIER - stap 2 */
+    translate:-100% 0%;
+    
+    /* JOUW CODE HIER - stap 4 */
+    transition:translate .3s;
+  }
+  
+  /* als menu open is */
+  nav.toonMenu {
+    /* JOUW CODE HIER - stap 4 */
+    translate:0% 0%;
+  }
+  
+  
+  
+  /****************************************************************/
+  /* styling voor de header als de browser minimaal 38em breed is */
+  /****************************************************************/
+  @media (min-width:38em) {
+    header > button {
+      /* JOUW CODE HIER - stap 6 */
+      display:none;
+    }
+    
+    nav {
+      /* JOUW CODE HIER - stap 7 */
+      position:static;
+      translate:unset;
+      padding:0;
+      
+      background:none;
+    }
+    
+    nav button {
+      /* JOUW CODE HIER - stap 6 */
+      display:none;
+    }
+    
+    nav ul {
+      /* JOUW CODE HIER - stap 8 */
+      display:flex;
+      gap:1em;
+    }
+    
+    nav a {
+      /* JOUW CODE HIER - stap 9 */
+      flex-direction:column;
+      
+      border:none;
+    }
+    
+    header > a:last-of-type {
+      /* JOUW CODE HIER - stap 9 */
+      flex-direction:column;
+    }
+  }
+  
+  
+  
+  /****************************************************************/
+  /* styling voor de header als de browser minimaal 57em breed is */
+  /****************************************************************/
+  @media (min-width:57em) {
+    header > a:last-of-type,
+    nav a {
+      /* JOUW CODE HIER - stap 10 */
+      flex-direction:row;
+    }
+  }
